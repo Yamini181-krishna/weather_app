@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* 🌸 Soft bluish-white tri-color background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #eaf6ff,   /* bluish white */
+    #fce7f3,   /* blush pink */
+    #ede9fe    /* lavender */
+  );
+}
+
+/* 🧁 Main Card */
+.weather-container {
+  width: 400px;
+  padding: 32px;
+  border-radius: 28px;
+
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(235, 245, 255, 0.9)
+  );
+
+  /* subtle glow instead of heavy shadow */
+  box-shadow: 0 0 18px rgba(180, 200, 255, 0.45);
+
+  text-align: center;
+  color: #334155;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* ☁️ Weather Icon – cute hover */
+.weather-icon {
+  font-size: 52px;
+  margin-bottom: 16px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.weather-icon:hover {
+  transform: translateY(-6px) scale(1.08);
+  filter: drop-shadow(0 0 8px rgba(147, 197, 253, 0.7));
+}
+
+/* 🔍 Search Area */
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  color: #334155;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+}
+
+.search-box input:focus {
+  outline: 2px solid #93c5fd;
+}
+
+/* 💕 Search Button – pastel hover */
+.search-box button {
+  padding: 14px 22px;
+  border-radius: 18px;
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #93c5fd,  /* blue */
+    #f9a8d4,  /* pink */
+    #c4b5fd   /* lavender */
+  );
+
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 12px rgba(180, 160, 255, 0.6);
+}
+
+/* 🌤 Weather Info */
+.weather-info {
+  margin-top: 28px;
+}
+
+.weather-info h2 {
+  font-size: 23px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.temp {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #60a5fa;
+}
+
+.desc {
+  color: #64748b;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+/* 📊 Extra Info */
+.extra {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.extra > span {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ⚠️ Error */
+.error {
+  margin-top: 14px;
+  color: #e11d48;
+  font-weight: 600;
+}
+
+/* 💬 Footer Message */
+.footer-msg {
+  font-size: 17px;
+  font-weight: 600;
+  color: #a78bfa;
+  text-align: center;
+  width: 100%;
+}
